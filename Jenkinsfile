@@ -20,7 +20,7 @@ docker build -t mypythonapp .
 
 docker rm -f mycontainer || true
 
-docker run --name mycontainer mypythonapp
+docker run -d -p 8000:8000 --name mycontainer mypythonapp
 
 EOF
                 '''
