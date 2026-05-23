@@ -8,21 +8,21 @@ pipeline {
             steps {
 
                 sh '''
-                ssh vagrant@192.168.56.11 << EOF
+ssh vagrant@192.168.56.11 << EOF
 
-                rm -rf simple-python-app
+rm -rf Myrepo
 
-                git clone https://github.com/ishani-06/Myrepo.git
+git clone https://github.com/ishani-06/Myrepo.git
 
-                cd simple-python-app
+cd Myrepo
 
-                docker build -t mypythonapp .
+docker build -t mypythonapp .
 
-                docker rm -f mycontainer || true
+docker rm -f mycontainer || true
 
-                docker run --name mycontainer mypythonapp
+docker run --name mycontainer mypythonapp
 
-                EOF
+EOF
                 '''
             }
         }
