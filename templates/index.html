@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home Page</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<h1>Welcome to Flask App</h1>
-
-<a href="/hello/Ishani">Click Here</a>
+<div class="container">
+    <h1>Welcome to My Flask CI/CD App</h1>
+    <a href="/hello/Ishani">Go to Hello Page</a>
+</div>
 
 </body>
 </html>
